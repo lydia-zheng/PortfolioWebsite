@@ -6,5 +6,20 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: 'My Portfolio',
+    author: 'Lydia Zheng'
+  },
+  plugins: [
+    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`
+      }
+    },
+    'gatsby-transformer-remark',
+    'gatsby-plugin-material-ui'
+  ],
 }
